@@ -1,0 +1,183 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('imagens/central.jpeg'); /* Caminho da imagem */
+    background-size: cover; /* Garante que a imagem cubra toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('imagens/cabecalho.jpg'); /* Caminho da imagem de fundo */
+    background-size: cover; /* A imagem cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    padding: 5px 30px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para dar profundidade */
+}
+
+.logo img {
+    width: 100px; /* Aumentando a logo */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Efeito de zoom na logo */
+}
+
+/* Navegação */
+nav.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu li {
+    margin-left: 25px;
+}
+
+nav.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav.menu li a:hover {
+    color: #ffeb3b; /* Amarelo mais claro */
+    text-decoration: underline; /* Adiciona underline ao passar o mouse */
+}
+
+/* Campo de busca */
+.busca {
+    padding: 20px;
+    text-align: center;
+}
+
+.busca form {
+    display: inline-block;
+}
+
+.busca input[type="text"] {
+    padding: 10px;
+    border: 1px solid #fbc02d;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+    outline: none;
+}
+
+.busca button {
+    padding: 10px 15px;
+    border: 1px solid #fbc02d;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #fbc02d;
+    color: white;
+    cursor: pointer;
+}
+
+/* Produtos */
+.produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.produto {
+    border: 1px solid #fbc02d;
+    padding: 50px;
+    width: calc(20% - 20px);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+}
+
+.produto button {
+    background-color: #fbc02d;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 40px;
+    padding: 15px 20px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.produto h2 {
+    text-align: center;
+}
+
+.produto p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; /* Negrito */
+    font-size: 24px;
+}
+
+/* Botão de compra */
+.btn-comprar {
+    display: inline-block;
+    background-color: #ff9800; /* Laranja para destacar */
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn-comprar:hover {
+    background-color: #e65100;
+}
+.mp-button {
+    background-color: #ff6200; /* Cor do botão */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mp-button:hover {
+    background-color: #e15d00; /* Cor quando o botão é hover */
+}

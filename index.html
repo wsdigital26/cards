@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones do Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="imagens/WS-Digital-Transparent.png" alt="WS Cards">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="https://wa.me/5561994088040" target="_blank">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Campo de busca -->
+    <section class="busca">
+        <form id="busca-form" action="javascript:void(0);">
+            <input type="text" id="search-input" name="search" placeholder="Buscar produto">
+            <button type="submit"><i class="fas fa-search"></i> Buscar</button>
+        </form>
+    </section>
+
+    <!-- Seção de produtos -->
+    <section class="produtos">
+        <div class="produto">
+            <img src="imagens/bluetv-mensal.png" alt="BlueTv Mensal">
+            <h2>BlueTv Mensal</h2>
+            <p class="preco">R$24,90</p>
+            <button id="mp-button" class="mp-button">Comprar</button>
+
+        </div>
+        <div class="produto">
+            <img src="imagens/bluetv-trimestral.png" alt="BlueTv Trimestral">
+            <h2>BlueTv Trimestral</h2>
+            <p class="preco">R$69,90</p>
+            <button id="mp-button" class="mp-button">Comprar</button>
+        </div>
+        <div class="produto">
+            <img src="imagens/bluetv-anual.png" alt="BlueTv Anual">
+            <h2>BlueTv Anual</h2>
+            <p class="preco">R$149,90</p>
+            <button id="mp-button" class="mp-button">Comprar</button>
+        </div>
+        <div class="produto">
+            <img src="imagens/onpix-mensal.png" alt="OnPix Mensal">
+            <h2>OnPix Mensal</h2>
+            <p class="preco">R$24,90</p>
+            <button id="mp-button" class="mp-button">Comprar</button>
+        </div>
+        <div class="produto">
+            <img src="imagens/onpix-trimestral-z46tv7fxyh.webp" alt="OnPix Trimestral">
+            <h2>OnPix Trimestral</h2>
+            <p class="preco">R$69,90</p>
+            <button id="mp-button" class="mp-button">Comprar</button>
+        </div>
+        <div class="produto">
+            <img src="imagens/onpix-anual.png" alt="OnPix Anual">
+            <h2>OnPix Anual</h2>
+            <p class="preco">R$149,90</p>
+            <button id="mp-button" class="mp-button">Comprar</button>
+        </div>
+    </section>
+
+    <!-- Botão do WhatsApp -->
+    <a href="https://wa.me/seunumerodetelefone" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Script JavaScript para a funcionalidade de busca -->
+    <script>
+        document.getElementById('busca-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let query = document.getElementById('search-input').value.toLowerCase();
+            let produtos = document.querySelectorAll('.produto');
+            
+            produtos.forEach(function(produto) {
+                let nomeProduto = produto.querySelector('h2').textContent.toLowerCase();
+                if (nomeProduto.includes(query)) {
+                    produto.style.display = 'block';  // Mostra o produto se corresponder à busca
+                } else {
+                    produto.style.display = 'none';  // Esconde o produto se não corresponder
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
