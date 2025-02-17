@@ -167,6 +167,7 @@ nav.menu li a:hover {
 .btn-comprar:hover {
     background-color: #e65100;
 }
+
 .mp-button {
     background-color: #ff6200; /* Cor do botão */
     color: white; /* Cor do texto */
@@ -180,4 +181,64 @@ nav.menu li a:hover {
 
 .mp-button:hover {
     background-color: #e15d00; /* Cor quando o botão é hover */
+}
+
+/* Consultas de mídia para responsividade */
+
+/* Para tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    nav.menu ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav.menu li {
+        margin: 10px 0;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para dispositivos móveis */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    nav.menu ul li a {
+        font-size: 14px;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto {
+        padding: 10px;
+    }
+
+    .mp-button {
+        width: 100%;
+    }
+
+    .whatsapp-button {
+        padding: 12px;
+        font-size: 20px;
+    }
 }
