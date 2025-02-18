@@ -4,9 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('imagens/central.jpeg'); /* Caminho da imagem */
-    background-size: cover; /* Garante que a imagem cubra toda a tela */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* Cabeçalho */
@@ -14,23 +14,23 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('imagens/cabecalho.jpg'); /* Caminho da imagem de fundo */
-    background-size: cover; /* A imagem cobre toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    background-image: url('imagens/cabecalho.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 5px 30px;
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para dar profundidade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo img {
-    width: 100px; /* Aumentando a logo */
+    width: 100px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
 .logo img:hover {
-    transform: scale(1.1); /* Efeito de zoom na logo */
+    transform: scale(1.1);
 }
 
 /* Navegação */
@@ -54,8 +54,8 @@ nav.menu li a {
 }
 
 nav.menu li a:hover {
-    color: #ffeb3b; /* Amarelo mais claro */
-    text-decoration: underline; /* Adiciona underline ao passar o mouse */
+    color: #ffeb3b;
+    text-decoration: underline;
 }
 
 /* Campo de busca */
@@ -97,8 +97,8 @@ nav.menu li a:hover {
 
 .produto {
     border: 1px solid #fbc02d;
-    padding: 50px;
-    width: calc(20% - 20px);
+    padding: 20px;
+    width: calc(50% - 20px); /* Ajustado para melhor responsividade */
     background-color: white;
     border-radius: 10px;
     text-align: center;
@@ -109,15 +109,16 @@ nav.menu li a:hover {
     height: auto;
 }
 
-.produto button {
-    background-color: #fbc02d;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-    color: white;
+.produto h2 {
+    font-size: 20px; /* Ajuste padrão */
+    text-align: center;
+}
+
+.produto p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    border-radius: 5px;
+    font-size: 20px;
 }
 
 /* Botão do WhatsApp */
@@ -139,21 +140,10 @@ nav.menu li a:hover {
     transform: scale(1.1);
 }
 
-.produto h2 {
-    text-align: center;
-}
-
-.produto p {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold; /* Negrito */
-    font-size: 24px;
-}
-
 /* Botão de compra */
 .btn-comprar {
     display: inline-block;
-    background-color: #ff9800; /* Laranja para destacar */
+    background-color: #ff9800;
     color: white;
     text-align: center;
     padding: 12px 20px;
@@ -168,9 +158,10 @@ nav.menu li a:hover {
     background-color: #e65100;
 }
 
+/* Botão de pagamento */
 .mp-button {
-    background-color: #ff6200; /* Cor do botão */
-    color: white; /* Cor do texto */
+    background-color: #ff6200;
+    color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -180,10 +171,10 @@ nav.menu li a:hover {
 }
 
 .mp-button:hover {
-    background-color: #e15d00; /* Cor quando o botão é hover */
+    background-color: #e15d00;
 }
 
-/* Consultas de mídia para responsividade */
+/* Responsividade */
 
 /* Para tablets */
 @media (max-width: 768px) {
@@ -206,7 +197,12 @@ nav.menu li a:hover {
     }
 
     .produtos {
-        grid-template-columns: repeat(2, 1fr);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 80%;
     }
 }
 
@@ -226,11 +222,21 @@ nav.menu li a:hover {
     }
 
     .produtos {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
     }
 
     .produto {
-        padding: 10px;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .produto h2 {
+        font-size: 16px; /* Reduzido para melhor ajuste */
+    }
+
+    .produto p {
+        font-size: 18px;
     }
 
     .mp-button {
