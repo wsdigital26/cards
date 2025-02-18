@@ -98,7 +98,7 @@ nav.menu li a:hover {
 .produto {
     border: 1px solid #fbc02d;
     padding: 20px;
-    width: calc(50% - 20px); /* Ajustado para melhor responsividade */
+    width: calc(20% - 20px); /* Mantém o tamanho adequado no desktop */
     background-color: white;
     border-radius: 10px;
     text-align: center;
@@ -110,7 +110,7 @@ nav.menu li a:hover {
 }
 
 .produto h2 {
-    font-size: 20px; /* Ajuste padrão */
+    font-size: 18px;
     text-align: center;
 }
 
@@ -176,8 +176,26 @@ nav.menu li a:hover {
 
 /* Responsividade */
 
-/* Para tablets */
+/* Para telas grandes (Notebook/Desktop) */
+@media (max-width: 1200px) {
+    .produto {
+        width: calc(25% - 20px); /* 4 produtos por linha */
+    }
+}
+
+/* Para tablets grandes (até 1024px) */
+@media (max-width: 1024px) {
+    .produto {
+        width: calc(33.33% - 20px); /* 3 produtos por linha */
+    }
+}
+
+/* Para tablets pequenos (até 768px) */
 @media (max-width: 768px) {
+    .produto {
+        width: calc(50% - 20px); /* 2 produtos por linha */
+    }
+
     header {
         flex-direction: column;
         text-align: center;
@@ -195,44 +213,17 @@ nav.menu li a:hover {
     nav.menu li {
         margin: 10px 0;
     }
-
-    .produtos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .produto {
-        width: 80%;
-    }
 }
 
-/* Para dispositivos móveis */
+/* Para celulares (até 480px) */
 @media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo img {
-        width: 100px;
-    }
-
-    nav.menu ul li a {
-        font-size: 14px;
-    }
-
-    .produtos {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .produto {
-        width: 90%;
+        width: 100%; /* 1 produto por linha */
         padding: 15px;
     }
 
     .produto h2 {
-        font-size: 16px; /* Reduzido para melhor ajuste */
+        font-size: 16px; /* Ajuste para telas menores */
     }
 
     .produto p {
